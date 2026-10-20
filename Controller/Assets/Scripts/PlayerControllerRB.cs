@@ -55,7 +55,7 @@ public class PlayerControllerRB : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 move = (transform.forward * moveVector.y + transform.right * moveVector.x) * walkSpeed;
+        Vector3 move = (transform.forward * moveVector.y + transform.right * moveVector.x) * currentSpeed;
         float verticalSpeed = rb.linearVelocity.y;
 
         float distance = capsule.height / 2f + groundCheckExtra;
